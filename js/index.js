@@ -499,6 +499,6 @@ let detailRender = (function ($) {
 
 })(Zepto);
 
-// loadingRender.init();
-cubeRender.init();
+loadingRender.init();
+// cubeRender.init();
 // console.log(loadingRender.getDataInfo);
