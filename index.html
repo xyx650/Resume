@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--忽略识别电话邮箱-->
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <title>Personal Resume</title>
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>
+    <script>
+        ~function () {
+            const selfAdaptation = function () {
+                let deviceWidth = document.documentElement.clientWidth;
+                const designWidth = 640;
+                if (deviceWidth >= 640) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = deviceWidth / designWidth * 100 + 'px';
+            }
+            selfAdaptation();
+
+            window.addEventListener('resize',selfAdaptation,false);
+        }();
+    </script>
+</head>
+<body>
+<main class="mainBox">
+
+    <!--loadingBox start-->
+    <section class="loadingBox" id="particles-js">
+
+
+        <div class="receiving"></div>
+        <div class="fail"><p></p></div>
+        <div class="received animation1" id="received">
+            下载完成
+        </div>
+
+        <div class="resumeName"></div>
+        <div class="resumeMotto"></div>
+
+        <div class="progress">
+            <div class="progressing"></div>
+        </div>
+    </section>
+    <!--loadingBox end-->
+
+    <!--phoneBox start-->
+    <section class="phoneBox">
+        <div class="top">
+            <p class="top-lt"></p>
+            <p class="topTime"></p>
+            <p class="top-Rt"></p>
+        </div>
+
+        <div class="text">
+            <p>Web前端</p>
+            <p>广西</p>
+        </div>
+
+        <div class="bottom">
+            <div class="answer">
+                <i class="phoneIcon"></i>
+                <i class="phoneText">滑动来打开简历</i>
+            </div>
+        </div>
+        <audio src="audio/bell.mp3" id="audioBell" loop preload="none"></audio>
+    </section>
+    <!--phoneBox end-->
+
+    <!--cubeBox start-->
+    <section class="cubeBox">
+        <ul class="box">
+            <li><img src="img/cube1.png" alt=""></li>
+            <li><img src="img/cube2.png" alt=""></li>
+            <li><img src="img/cube3.png" alt=""></li>
+            <li><img src="img/cube4.png" alt=""></li>
+            <li><img src="img/cube5.png" alt=""></li>
+            <li><img src="img/cube6.png" alt=""></li>
+        </ul>
+
+    </section>
+
+    <!--cubeBox end-->
+
+
+    <!--detailBox start-->
+    <section class="detailBox">
+
+
+        <!--swiper-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide page1">
+                    <div class="returnBar">
+                        <a href="javascript:;" class="returnIcon"></a>
+                    </div>
+
+                    <a href="javascript:;" class="slideRight"></a>
+
+                    <dl id="makisuBox">
+                        <dt>基本资料</dt>
+                        <dd>
+                            <p>姓名：陆祖宁</p>
+                        </dd>
+                        <dd>
+                            <p>性别：男</p>
+                        </dd>
+                        <dd>
+                            <p>年龄：28</p>
+                        </dd>
+                        <dd>
+                            <p>籍贯：广西梧州</p>
+                        </dd>
+                        <dd>
+                           <p>学历：大专</p>
+                        </dd>
+                        <dd>
+                            <p>专业：计算机科学与技术</p>
+                        </dd>
+                        <dd>
+                            <p>毕业院校：青海民族学院</p>
+                        </dd>
+                        <dd>
+                            <p>工作年限：5年</p>
+                        </dd>
+
+                    </dl>
+
+                </div>
+
+                <div class="swiper-slide page2 messageBox" id="message">
+                    <div class="returnBar">
+                        <a href="javascript:;" class="returnIcon"></a>
+                    </div>
+                    <ul class="talkBox clearfix ">
+                        <li class="hr">
+                            <i></i>
+                            <em></em>
+                            Hello，我是本公司人见人爱花见花开的HR，介绍一下你自己呗~
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            我，不装，不做，不清新，不腹黑~举世皆淫我独清，举世皆荡我独纯~
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            我徘徊在科技和文艺的十字路口，遥遥地看到长着翅膀的乔帮主和怀揣锤头的老罗在人文路口闲谈~
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            搞文艺不为搞妹子，搞程序也不为搞汉子，见到肥皂绕着走，面朝大海，春暖花开~~
+                        </li>
+                        <li class="hr">
+                            <i></i><em></em>
+                            Stop！可以说人话嘛~谢谢
+                        </li>
+                        <li class="hr">
+                            <i></i><em></em>
+                            <img src="img/talk2.gif" alt="" style="width: 2.5rem">
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            我性格好，文静，随和，非常听话~
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            每天早上吵醒我的是那改变世界的理想，每天努力工作~
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            闲暇之余还积极探求职业之内的各种知识，舍生取义只为那人生中闪光的一刻，深感不能辜负上帝赋予我的使命~
+                        </li>
+                        <li class="hr">
+                            <i></i><em></em>
+                            em.....同志快醒醒，快醒醒.....
+                        </li>
+                        <li class="hr">
+                            <i></i><em></em>
+                            But~~I quite agree it~
+                        </li>
+                        <li class="hr">
+                            <i></i><em></em>
+                            <img src="img/talk1.jpg" alt="" style="width: 3.1rem">
+                        </li>
+                        <li class="me">
+                            <i></i><em></em>
+                            <img src="img/talk3.gif" alt="" style="width: 2.2rem">
+                        </li>
+                        <li class="hr">
+                            <i></i><em></em>
+                            <img src="img/talk4.gif" alt="" style="width: 2.8rem">
+                        </li>
+
+                    </ul>
+
+
+                    <div class="keyBord">
+                        <span>em.....同志快醒醒，快醒醒.....</span>
+                        <a href="javascript:;" class="submit"></a>
+                    </div>
+
+                </div>
+                <div class="swiper-slide page3">
+                    <div class="tree"></div>
+                    <div class="returnBar">
+                        <a href="javascript:;" class="returnIcon"></a>
+                    </div>
+
+                    <div class="skillBox">
+                        <div>
+                            <img src="img/skill1.png" alt="">
+                            <img src="img/skill2.png" alt="">
+                            <img src="img/skill3.png" alt="">
+                            <img src="img/skill4.png" alt="">
+                            <img src="img/skill5.png" alt="">
+                            <img src="img/skill6.png" alt="">
+                            <img src="img/skill7.png" alt="">
+                        </div>
+                    </div>
+                    <img src="img/skillBig.png" alt="" class="center">
+                    <h2>天赋树</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/makisu.min.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<script type="text/javascript">
+    particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 130,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    /*"image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }*/
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 1,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 20,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 40,
+                    "color": "#fff",
+                    "opacity": 1,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 120,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 300
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true,
+            "config_demo": {
+                "hide_card": false,
+                "background_color": "#b61924",
+                "background_image": "",
+                "background_position": "50% 50%",
+                "background_repeat": "no-repeat",
+                "background_size": "cover"
+            }
+        }
+
+    );
+</script>
+
+
+</body>
+</html>
