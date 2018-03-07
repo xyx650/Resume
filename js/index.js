@@ -422,6 +422,7 @@ let detailRender = (function ($) {
 
                 //=>page1单独处理
                 if (activeIndex == 0) {
+                    $makisuBox.css('opacity',1);
                     $makisuBox.makisu({
                         selector: 'dd',
                         overlap: 0.6,
@@ -429,6 +430,7 @@ let detailRender = (function ($) {
                     });
                     $makisuBox.makisu('open');
                 } else {
+                    $makisuBox.css('opacity',0);
                     $makisuBox.makisu({
                         selector: 'dd',
                         overlap: 0,
