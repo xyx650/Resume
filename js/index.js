@@ -89,6 +89,7 @@ let loadingRender = (function ($) {
                 $received.css('display', 'block').on({
                     tap: () => {
                         $loadingBox.remove();
+                        // $loadingBox.css('display','none');
                         phoneRender.init();
                     },
                     webkitAnimationEnd: () => {
@@ -334,8 +335,8 @@ let detailRender = (function ($) {
             // console.log($keyBord.offset().height);
             // console.log('autotimer:', autoTimer);
             // console.log('$talkList.length'+$talkList.length);
-            console.log($cur.offset().top + $cur.offset().height);
-            console.log('deadline:' + deadLine);
+            // console.log($cur.offset().top + $cur.offset().height);
+            // console.log('deadline:' + deadLine);
 
             if ($cur.offset().top + $cur.offset().height > deadLine / 1.2) {
                 offset += -$cur.offset().height;
@@ -504,7 +505,6 @@ let detailRender = (function ($) {
                 });
 
 
-
             }
             // console.log(swiperH);
             swiperH.slideTo(index, 0);
@@ -515,6 +515,6 @@ let detailRender = (function ($) {
 
 })(Zepto);
 
-// loadingRender.init();
-cubeRender.init();
+loadingRender.init();
+// cubeRender.init();
 // console.log(loadingRender.getDataInfo);
