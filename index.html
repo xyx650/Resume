@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,minimal-ui">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="browsermode" content="application">
     <!--忽略识别电话邮箱-->
     <meta name="format-detection" content="telephone=no,email=no" />
-    <!--WebApp全屏模式：注意!viewport 后面加上 minimal-ui 在safri 体现效果-->
+    <!--WebApp全屏模式-->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- UC强制全屏 -->
     <meta name="full-screen" content="yes">
     <!-- QQ强制全屏 -->
     <meta name="x5-fullscreen" content="true">
+    <meta name="x5-orientation" content="portrait">
     <title>Personal Resume</title>
     <link rel="stylesheet/less" href="css/index.less">
     <script src="js/less-2.5.3.min.js"></script>
@@ -97,10 +99,10 @@
 
 
         <!--swiper-->
-        <div class="swiper-container">
+        <div class="swiper-container swiper-container-h">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide page1">
+                <div class="swiper-slide swiper-slide-h page1">
                     <div class="returnBar">
                         <a href="javascript:;" class="returnIcon"></a>
                     </div>
@@ -138,7 +140,7 @@
 
                 </div>
 
-                <div class="swiper-slide page2 messageBox" id="message">
+                <div class="swiper-slide swiper-slide-h page2 messageBox" id="message">
                     <div class="returnBar">
                         <a href="javascript:;" class="returnIcon"></a>
                     </div>
@@ -210,7 +212,8 @@
                     </div>
 
                 </div>
-                <div class="swiper-slide page3">
+
+                <div class="swiper-slide swiper-slide-h page3">
                     <div class="tree"></div>
                     <div class="returnBar">
                         <a href="javascript:;" class="returnIcon"></a>
@@ -230,6 +233,80 @@
                     <img src="img/skillBig.png" alt="" class="center">
                     <h2>天赋树</h2>
                 </div>
+
+                <div class="swiper-slide swiper-slide-h page4">
+                    <div class="returnBar">
+                        <a href="javascript:;" class="returnIcon"></a>
+                    </div>
+                    <h2></h2>
+
+
+                    <div class="swiper-container swiper-container-v">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                            <div class="swiper-slide swiper-slide-v"></div>
+                        </div>
+                        <a href="javascript:;" class="slideRight"></a>
+                    </div>
+
+
+
+                </div>
+
+                <div class="swiper-slide swiper-slide-h page5">
+                    <div class="returnBar">
+                        <a href="javascript:;" class="returnIcon"></a>
+                    </div>
+
+                    <div class="exp">
+                        <i class="dash"></i>
+                        <i class="circle circle1"></i>
+                        <i class="circle circle2"></i>
+                        <i class="arrow arrow1"></i>
+                        <i class="arrow arrow2"></i>
+                        <i class="arrow arrow3"></i>
+
+                        <h3 class="gzjy">工作经验</h3>
+                        <h3 class="xmjy">项目经验</h3>
+                        <h6 class="time1">2012.6-2013.2</h6>
+                        <h6 class="time2">2013.5-2017.9</h6>
+                        <em class="line1"></em>
+                        <em class="line2"></em>
+                        <h4 class="tit1">平面设计&nbsp;&nbsp;梧州海虹影视</h4>
+                        <h4 class="tit2">网页制作&nbsp;&nbsp;西江在线网</h4>
+                        <h5 class="h5con">从2015年开始研究学习制作移动端页面，过程中了解到H5C3对于传统的PC页面的改进，学习到了很多新的技术。移动端H5常用的类似JQ的类库Zepto，Iscroll和Swiper，fullPage等，还有less、ES6、Node.js等框架。可以设计制作一套完整的移动端H5页面。</h5>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-h page6">
+                    <div class="mask" id="mask">
+                        <div class="returnBar">
+                            <a href="javascript:;" class="returnIcon"></a>
+                        </div>
+
+                        SasASASDASD
+                        asd
+                        asd
+                        as
+                        d
+                        sad
+                        asd
+                        sad
+                    </div>
+
+
+
+                </div>
+
+
             </div>
 
         </div>
@@ -241,7 +318,7 @@
 <script src="js/particles.min.js"></script>
 <script src="js/makisu.min.js"></script>
 <script src="js/swiper.min.js"></script>
-
+<!--粒子插件-->
 <script type="text/javascript">
     particlesJS('particles-js',
         {
@@ -351,16 +428,119 @@
                 }
             },
             "retina_detect": true,
-            "config_demo": {
-                "hide_card": false,
-                "background_color": "#b61924",
-                "background_image": "",
-                "background_position": "50% 50%",
-                "background_repeat": "no-repeat",
-                "background_size": "cover"
-            }
         }
+    );
 
+    particlesJS('mask',
+        {
+            "particles": {
+                "number": {
+                    "value": 130,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": "#cccccc"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#aaa"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    /*"image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }*/
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 1,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 20,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 40,
+                    "color": "#000000",
+                    "opacity": 1,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 120,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 300
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true,
+
+        }
     );
 </script>
 

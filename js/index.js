@@ -285,7 +285,10 @@ let detailRender = (function ($) {
         $returnIcon = $detailBox.find('.returnIcon'),
         $skillBox = $('.skillBox'),
         $imgList = $skillBox.find('img'),
-        swipervertical = null;
+        swiperH = null,
+        swiperV = null;
+
+    // swipervertical = null;
     // console.log($imgList);
     let $makisuBox = $('#makisuBox');
 
@@ -331,12 +334,12 @@ let detailRender = (function ($) {
             // console.log($keyBord.offset().height);
             // console.log('autotimer:', autoTimer);
             // console.log('$talkList.length'+$talkList.length);
-            console.log($cur.offset().top+$cur.offset().height);
-            console.log('deadline:'+deadLine);
+            console.log($cur.offset().top + $cur.offset().height);
+            console.log('deadline:' + deadLine);
 
-            if ($cur.offset().top+$cur.offset().height>deadLine/1.18) {
+            if ($cur.offset().top + $cur.offset().height > deadLine / 1.2) {
                 offset += -$cur.offset().height;
-                $talkBox.css(`transform`, `translateY(${offset*1.3}px)`);
+                $talkBox.css(`transform`, `translateY(${offset * 1.33}px)`);
             }
             if (step === 8) {
                 $cur.one('transitionend', keybordFn);
@@ -365,7 +368,7 @@ let detailRender = (function ($) {
         }, 2000);
     };
 
-    let messageClear=function () {
+    let messageClear = function () {
         clearInterval(autoTimer);
 
         step = -1;
@@ -438,11 +441,11 @@ let detailRender = (function ($) {
                     n = -1;
                     messageUp();
 
-                }else {
+                } else {
                     messageClear();
                 }
 
-                if (activeIndex != 2) {
+                if (activeIndex !== 2) {
                     $imgList.removeAttr('style');
                 }
 
@@ -456,11 +459,10 @@ let detailRender = (function ($) {
                 });
             };
 
-            // console.log($talkBox.css('transform'));
             // console.log(step);
-            if (!swipervertical) {
+            if (!swiperH) {
 
-                swipervertical = new Swiper('.swiper-container', {
+                swiperH = new Swiper('.swiper-container-h', {
                     effect: 'coverflow',
                     on: {
                         init: function () {
@@ -472,16 +474,29 @@ let detailRender = (function ($) {
                     }
                 });
 
+
+                swiperV = new Swiper('.swiper-container-v', {
+                    direction: 'vertical',
+                    // watchSlidesProgress: true,
+                    // loop:true,
+                    effect: 'flip'
+
+                });
+
                 $returnIcon.tap(() => {
                     $detailBox.css('display', 'none');
                     $cubeBox.css('display', 'block');
 
+
                     //移除page1 introduction
                     messageClear();
-                    change(swipervertical);
+
                     //移除page2 skillbox
                     $imgList.removeAttr('style');
                     // clearInterval(autoTimer);
+                    change(swiperH);
+
+
                 });
 
                 $imgList.on('webkitAnimationEnd', function () {
@@ -489,9 +504,10 @@ let detailRender = (function ($) {
                 });
 
 
+
             }
-            // console.log(swipervertical);
-            swipervertical.slideTo(index, 0);
+            // console.log(swiperH);
+            swiperH.slideTo(index, 0);
 
 
         }
@@ -499,6 +515,6 @@ let detailRender = (function ($) {
 
 })(Zepto);
 
-loadingRender.init();
-// cubeRender.init();
+// loadingRender.init();
+cubeRender.init();
 // console.log(loadingRender.getDataInfo);
