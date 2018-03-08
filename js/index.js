@@ -163,6 +163,7 @@ let phoneRender = (function ($) {
     setInterval(getNow, 5000);
 
     let audioBell = $('#audioBell')[0];
+    audioBell.volume=0.5;
 
     //滑动打开简历按钮事件
     let startX = 0,
